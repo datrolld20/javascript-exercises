@@ -1,5 +1,15 @@
-const repeatString = function() {
+const repeatString = function(str, times) {
+    let result = '';
 
+    if(times < 0) {
+        return 'ERROR';
+    }
+
+    for(let i = 0; i < times; i++) {
+        result = result.concat(str);    
+    }
+
+    return result;
 }
 
-module.exports = repeatString
+module.exports = repeatString;
